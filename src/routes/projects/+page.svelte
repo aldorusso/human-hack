@@ -13,17 +13,18 @@
    $: filteredProjects = projects.filter(project => {
        const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
                              project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                             (project.category && project.category.toLowerCase().includes(searchQuery.toLowerCase()));
+                             authors.find(a => a.id === project.authorId)?.name.toLowerCase().includes(searchQuery.toLowerCase());
        
        const matchesCategory = selectedCategory === 'Todos' || project.category === selectedCategory;
        const matchesDifficulty = selectedDifficulty === 'Todas' || project.difficulty === selectedDifficulty;
-
+       
        return matchesSearch && matchesCategory && matchesDifficulty;
    });
 </script>
 
 <svelte:head>
-    <title>Catálogo de Proyectos | HumanHack.org</title>
+    <title>Proyectos de Hardware Social | HumanHack.org</title>
+    <meta name="description" content="Explora nuestro catálogo de soluciones de hardware open source de bajo coste para salud, movilidad y tercera edad. Descarga diseños validados y listos para fabricar." />
 </svelte:head>
 
 <PageHeader 

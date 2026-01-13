@@ -7,6 +7,7 @@
 
 <svelte:head>
     <title>Registro | HumanHack.org</title>
+    <meta name="description" content="Crea tu cuenta en HumanHack para unirte a la red de makers, descargar planos y contribuir al hardware social." />
 </svelte:head>
 
 <div class="auth-layout">

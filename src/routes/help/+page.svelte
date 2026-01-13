@@ -27,6 +27,7 @@
 
 <svelte:head>
     <title>Solicitar Ayuda | HumanHack.org</title>
+    <meta name="description" content="¿Necesitas una prótesis, un pastillero inteligente o asistencia técnica? En HumanHack fabricamos soluciones de hardware social sin coste de mano de obra." />
 </svelte:head>
 
 <PageHeader 

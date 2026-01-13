@@ -8,7 +8,8 @@
 </script>
 
 <svelte:head>
-  <title>HumanHack.org | Tecnología para Todos</title>
+    <title>HumanHack.org | Tecnología para Todos</title>
+    <meta name="description" content="HumanHack.org dinamiza la creación de hardware social open source. Diseñamos soluciones de bajo coste para devolver la autonomía a las personas." />
 </svelte:head>
 
 <!-- HERO SECTION: Premium & Interactive -->

@@ -5,6 +5,7 @@
 
 <svelte:head>
     <title>Nosotros | HumanHack.org</title>
+    <meta name="description" content="Conoce la misión de HumanHack.org: democratizar la tecnología de asistencia mediante hardware social open source, diseño industrial y software libre." />
 </svelte:head>
 
 <PageHeader 

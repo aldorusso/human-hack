@@ -4,6 +4,7 @@
 
 <svelte:head>
     <title>Iniciar Sesión | HumanHack.org</title>
+    <meta name="description" content="Accede a tu cuenta de HumanHack para gestionar proyectos y colaborar en el repositorio de hardware social." />
 </svelte:head>
 
 <div class="auth-layout">

@@ -7,6 +7,7 @@
 
 <svelte:head>
     <title>Únete a Nosotros | HumanHack.org</title>
+    <meta name="description" content="¿Quieres ser parte de la revolución del hardware social? Únete como desarrollador, diseñador o maker y ayuda a fabricar soluciones de accesibilidad." />
 </svelte:head>
 
 <PageHeader 

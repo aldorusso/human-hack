@@ -13,13 +13,18 @@
        { item: 'Filamento PLA', qty: '200g' },
        { item: 'Arduino Nano', qty: '1' },
        { item: 'Servomotores SG90', qty: '5' },
-       { item: 'Cableado AWG24', qty: '2m' },
+       { item: 'Pulsador 12mm', qty: '3' },
        { item: 'Tornillería M3', qty: '1 Kit' }
    ];
 </script>
 
 <svelte:head>
     <title>{project.title} | HumanHack.org</title>
+    <meta name="description" content={project.description} />
+    <meta property="og:title" content="{project.title} - Hardware Social Open Source" />
+    <meta property="og:description" content={project.description} />
+    <meta property="og:image" content={project.image} />
+    <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <div class="project-page" in:fade>

@@ -9,7 +9,8 @@
 </script>
 
 <svelte:head>
-    <title>{author?.name || 'Autor'} | HumanHack</title>
+    <title>{author?.name || 'Autor'} | HumanHack.org</title>
+    <meta name="description" content="Perfil de {author?.name}, {author?.role} en HumanHack.org. Conoce sus contribuciones al hardware social open source." />
 </svelte:head>
 
 {#if author}

@@ -25,6 +25,7 @@
 
 <svelte:head>
     <title>Donar | HumanHack.org</title>
+    <meta name="description" content="Tu donación financia materiales y componentes para dispositivos de hardware social. Ayúdanos a entregar tecnología de asistencia a quienes la necesitan." />
 </svelte:head>
 
 <PageHeader 
