@@ -98,8 +98,8 @@
         position: absolute;
         top: 1rem;
         right: 1rem;
-        background: var(--color-primary);
-        color: var(--color-button-text);
+        background: rgba(255, 255, 255, 0.95);
+        color: var(--color-primary-dark);
         padding: 0.25rem 0.75rem;
         border-radius: 1rem;
         font-size: 0.75rem;

@@ -149,7 +149,7 @@
     .hero-overlay {
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0, 71, 62, 0.9) 100%);
+        background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(15, 23, 42, 0.9) 100%);
         z-index: 1;
     }
     .hero-content {
@@ -246,7 +246,7 @@
         align-items: center;
         border: 1px solid #e2e8f0;
     }
-    .bom-item .qty { font-weight: 700; color: var(--color-button-text); background: var(--color-primary); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.9rem; }
+    .bom-item .qty { font-weight: 700; color: var(--color-primary); background: var(--color-accent); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.9rem; }
     .bom-item .name { font-weight: 500; color: var(--color-text); }
 
     /* DOWNLOAD CARD */

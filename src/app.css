@@ -1,16 +1,17 @@
 /* Global Variables */
 :root {
-    --color-primary: #faae2b;
-    --color-primary-dark: #f09f1d;
-    --color-secondary: #ffa8ba;
-    --color-accent: #fa5246;
+    --color-primary: #1C4D8D;
+    --color-primary-dark: #0F2854;
+    --color-secondary: #4988C4;
+    --color-accent: #BDE8F5;
 
-    --color-bg: #f2f7f5;
+    --color-bg: #f8fafc;
+    /* Let's keep a very light neutral bg for readability */
     --color-surface: #ffffff;
 
-    --color-text: #00473e;
-    --color-text-muted: #475d5b;
-    --color-button-text: #00473e;
+    --color-text: #0F2854;
+    /* Using the dark navy for text for better harmony */
+    --color-text-muted: #64748b;
 
     --font-heading: 'Inter', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
@@ -69,7 +70,7 @@ img {
 
 .btn-primary {
     background-color: var(--color-primary);
-    color: var(--color-button-text);
+    color: white;
 }
 
 .btn-primary:hover {
