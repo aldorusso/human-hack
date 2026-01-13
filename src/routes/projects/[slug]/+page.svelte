@@ -1,11 +1,12 @@
 <script lang="ts">
    import { page } from '$app/stores';
    import { fade, fly } from 'svelte/transition';
-   import { projects } from '$lib/data';
+   import { projects, authors } from '$lib/data';
 
    // Get project from slug (simulated data access)
    $: slug = $page.params.slug;
    $: project = projects.find(p => p.slug === slug) || projects[0];
+   $: author = authors.find(a => a.id === project.authorId);
 
    // Mock BOM data
    const bom = [
@@ -93,6 +94,30 @@
                     <small>Actualizado: Ene 2026</small>
                 </div>
             </div>
+
+            {#if author}
+                <div class="author-card">
+                    <div class="author-header">
+                        <img src={author.avatar} alt={author.name} class="author-img" />
+                        <div class="author-meta">
+                            <span class="author-label">Autor del Proyecto</span>
+                            <a href="/authors/{author.id}" class="author-name">{author.name}</a>
+                        </div>
+                    </div>
+                    <p class="author-bio-short">{author.bio}</p>
+                    <div class="author-stats">
+                        <div class="a-stat">
+                            <span class="a-val">{author.contributions}</span>
+                            <span class="a-lab">Proyectos</span>
+                        </div>
+                        <div class="a-stat">
+                            <span class="a-val">{author.joined}</span>
+                            <span class="a-lab">Miembro</span>
+                        </div>
+                    </div>
+                    <a href="/authors/{author.id}" class="btn-outline btn-block">Ver Perfil Completo</a>
+                </div>
+            {/if}
         </div>
 
     </div>
@@ -251,6 +276,82 @@
         border-top: 1px solid #e2e8f0;
         display: flex; justify-content: space-between;
         color: #94a3b8;
+    }
+
+    /* AUTHOR CARD */
+    .author-card {
+        margin-top: 2rem;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        padding: 1.5rem;
+        border-radius: 1rem;
+    }
+    .author-header {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .author-img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid white;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    }
+    .author-label {
+        display: block;
+        font-size: 0.75rem;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+    }
+    .author-name {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--color-text);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .author-name:hover { color: var(--color-primary); }
+    .author-bio-short {
+        font-size: 0.9rem;
+        color: #475569;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+    .author-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background: white;
+        border-radius: 0.5rem;
+        border: 1px solid #e2e8f0;
+    }
+    .a-stat { display: flex; flex-direction: column; }
+    .a-val { font-weight: 700; color: var(--color-text); font-size: 0.95rem; }
+    .a-lab { font-size: 0.75rem; color: #94a3b8; }
+
+    .btn-outline {
+        display: block;
+        text-align: center;
+        padding: 0.75rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 0.5rem;
+        color: #475569;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.2s;
+    }
+    .btn-outline:hover {
+        background: white;
+        border-color: var(--color-primary);
+        color: var(--color-primary);
     }
 
     @media (max-width: 900px) {

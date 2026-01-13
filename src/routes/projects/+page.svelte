@@ -1,7 +1,7 @@
 <script lang="ts">
    import { fade, fly } from 'svelte/transition';
    import PageHeader from '$lib/components/PageHeader.svelte';
-   import { projects } from '$lib/data';
+   import { projects, authors } from '$lib/data';
 
    let searchQuery = '';
    let selectedCategory = 'Todos';
@@ -96,6 +96,14 @@
                     <span class="tag difficulty">{project.difficulty}</span>
                     <span class="tag spec">{project.specs?.printTime || 'N/A'}</span>
                 </div>
+                {#if project.authorId}
+                    <div class="author-credits">
+                        <span>Por </span>
+                        <a href="/authors/{project.authorId}" class="author-link">
+                            {authors.find(a => a.id === project.authorId)?.name || 'Anónimo'}
+                        </a>
+                    </div>
+                {/if}
                 <a href="/projects/{project.slug}" class="btn btn-primary full-width">Ver Detalles</a>
             </div>
         </div>
@@ -301,6 +309,21 @@
     }
     .tag.difficulty { background: #eff6ff; color: var(--color-primary); }
     .tag.spec { background: #f1f5f9; color: var(--color-text-muted); }
+
+    .author-credits {
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-bottom: 1.25rem;
+    }
+    .author-link {
+        color: var(--color-text);
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .author-link:hover {
+        color: var(--color-primary);
+    }
     
     .full-width {
         width: 100%;
