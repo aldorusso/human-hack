@@ -37,9 +37,9 @@
 
 <style>
     .page-header-wrapper {
-        background: var(--color-surface);
+        background: var(--color-bg);
         padding: 3rem 0;
-        border-bottom: 1px solid #e2e8f0;
+        border-bottom: 1px solid rgba(0, 71, 62, 0.1);
         margin-bottom: 2rem;
     }
 

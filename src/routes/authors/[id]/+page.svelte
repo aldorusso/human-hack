@@ -97,13 +97,13 @@
 <style>
     .author-page {
         min-height: 100vh;
-        background: #f8fafc;
+        background: var(--color-bg);
         padding-bottom: 6rem;
     }
 
     .header-band {
         height: 200px;
-        background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+        background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary-dark) 100%);
     }
 
     .main-content {

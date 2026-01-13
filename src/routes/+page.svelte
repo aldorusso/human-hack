@@ -281,7 +281,7 @@
    .hero-overlay {
        position: absolute;
        inset: 0;
-       background: linear-gradient(90deg, rgba(15,35,84,0.95) 0%, rgba(15,35,84,0.6) 100%);
+       background: linear-gradient(90deg, rgba(0, 71, 62, 0.95) 0%, rgba(0, 71, 62, 0.6) 100%);
    }
    .hero-content {
        position: relative;
@@ -296,7 +296,7 @@
        font-weight: 800;
    }
    .gradient-text {
-       background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+       background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
        -webkit-background-clip: text;
        -webkit-text-fill-color: transparent;
    }
@@ -371,7 +371,7 @@
        position: relative;
        width: 80px; height: 80px;
        margin: 0 auto 1.5rem;
-       background: radial-gradient(circle at center, rgba(73, 136, 196, 0.2) 0%, transparent 70%);
+       background: radial-gradient(circle at center, rgba(250, 174, 43, 0.2) 0%, transparent 70%);
        display: flex; align-items: center; justify-content: center;
    }
    .icon { font-size: 3rem; }
@@ -463,7 +463,7 @@
        cursor: pointer;
        transition: all 0.2s;
    }
-   .donation-btn:hover, .donation-btn.active { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-accent); }
+   .donation-btn:hover, .donation-btn.active { border-color: var(--color-primary); color: var(--color-text); background: var(--color-secondary); }
    
    .btn-block { width: 100%; display: block; }
    .secure-note { text-align: center; font-size: 0.8rem; color: var(--color-text-muted); margin-top: 1rem; }
