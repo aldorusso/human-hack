@@ -8,7 +8,7 @@
 
 <PageHeader 
     title="Nuestra Misión" 
-    description="Humanhacks nace de la convicción de que nadie debería quedarse atrás por el alto coste de la tecnología. Somos un equipo dedicado a crear el primer repositorio mundial de hardware social."
+    description="Humanhacks es un repositorio colaborativo de hardware social. Diseñamos soluciones propias y curamos los mejores proyectos open source de la comunidad global, dando crédito y visibilidad a sus creadores."
     breadcrumbs={[{ label: 'Nosotros', href: '/about' }]}
 />
 
@@ -18,8 +18,8 @@
         <div class="values-grid">
             <div class="value-card">
                 <div class="icon">🎯</div>
-                <h3>Propósito</h3>
-                <p>Solucionar problemas reales del sector social mediante hardware reproducible.</p>
+                <h3>Curación de Calidad</h3>
+                <p>Seleccionamos y validamos proyectos de terceros para asegurar su utilidad y seguridad antes de compartirlos.</p>
             </div>
             <div class="value-card">
                 <div class="icon">🔍</div>
@@ -74,11 +74,11 @@
     <div class="container context-content">
         <div class="text-block">
             <h2>Desarrollo del Proyecto</h2>
-            <p>El desarrollo de Humanhacks se basa en la iteración constante y la validación en campo. Oscar, Carlos y Aldo fundaron este proyecto con una visión clara: reducir la brecha entre la capacidad técnica y la necesidad social.</p>
-            <p>Cada prototipo subido a nuestra plataforma pasa por un proceso de revisión técnica riguroso, asegurando que los materiales sean accesibles, el código sea mantenible y el montaje sea reproducible por cualquier persona con herramientas básicas.</p>
+            <p>El desarrollo de Humanhacks se basa en la colaboración abierta. No solo creamos, sino que buscamos activamente soluciones brillantes desarrolladas por makers de todo el mundo. Nuestra plataforma actúa como un altavoz y un filtro de calidad.</p>
+            <p>Cada prototipo subido, sea propio o de un tercero, pasa por un proceso de revisión técnica riguroso. Nos aseguramos de respetar escrupulosamente las licencias open source, garantizando que cada autor reciba el reconocimiento que merece por su aportación a la humanidad.</p>
             
             <div class="mission-highlight">
-                <strong>Misión:</strong> Convertir problemas complejos en soluciones de código abierto y bajo coste.
+                <strong>Misión:</strong> Construir el repositorio de hardware social más fiable y útil del mundo.
             </div>
         </div>
     </div>

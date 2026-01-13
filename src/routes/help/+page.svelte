@@ -55,12 +55,62 @@
 
         <!-- MAIN FORM (Centered & Wide) -->
         <div class="form-container" in:fly={{ y: 20, duration: 800, delay: 200 }}>
-            <form class="premium-form" on:submit|preventDefault={() => alert('Mensaje enviado. Nos pondremos en contacto pronto.')}>
+            
+
+<div class="typeform-wrapper">
+    {#if step === 1}
+        <div class="typeform-step" in:fade>
+            <h3>¿Quién eres?</h3>
+            <div class="role-grid">
+                {#each roles as r}
+                    <button type="button" class="role-card {role === r.id ? 'active' : ''}" on:click={() => role = r.id}>
+                        <div class="role-icon">{r.icon}</div>
+                        <span>{r.label}</span>
+                    </button>
+                {/each}
+            </div>
+            <button class="btn btn-primary btn-next" on:click={() => step = 2}>Siguiente</button>
+        </div>
+    {:else if step === 2}
+        <div class="typeform-step" in:fade>
+            <h3>Datos de contacto</h3>
+            <div class="form-group">
+                <label for="name">Nombre Completo</label>
+                <input type="text" id="name" placeholder="Tu nombre" bind:value={name} required />
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" placeholder="tucorreo@ejemplo.com" bind:value={email} required />
+            </div>
+            <button class="btn btn-primary btn-next" on:click={() => step = 3}>Siguiente</button>
+        </div>
+    {:else if step === 3}
+        <div class="typeform-step" in:fade>
+            <h3>Detalles del caso</h3>
+            <div class="form-group">
+                <label for="device">Dispositivo de Interés</label>
+                <select id="device" bind:value={interest}>
+                    <option value="bionic-hand">Mano Biónica (Prótesis mecánica)</option>
+                    <option value="radio">Radio Vintage (Accesibilidad cognitiva)</option>
+                    <option value="pillbox">Pastillero Inteligente (Gestión medicación)</option>
+                    <option value="eye-tracker">Asistente Ocular (Comunicación)</option>
+                    <option value="other">Otro / Asesoría Técnica</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Detalles del Caso</label>
+                <textarea id="message" rows="5" placeholder="Cuéntanos brevemente la situación..." bind:value={message}></textarea>
+            </div>
+            <button class="btn btn-primary btn-submit" on:click={submit}>Enviar Solicitud</button>
+        </div>
+    {/if}
+    <div class="progress-bar">
+        <div class="progress" style="width: {step * 33}%"></div>
+    </div>
+</div>
+</div>
                 
-                <div class="form-header-center">
-                    <h3>Formulario de Solicitud</h3>
-                    <p>Por favor, completa los siguientes datos para que podamos entender mejor tu situación.</p>
-                </div>
+
 
                 <div class="form-section">
                     <label class="section-label">¿Quién eres?</label>
@@ -75,40 +125,7 @@
                                 <span>{r.label}</span>
                             </button>
                         {/each}
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Nombre Completo</label>
-                        <input type="text" id="name" placeholder="Tu nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="device">Dispositivo de Interés</label>
-                    <div class="select-wrapper">
-                        <select id="device" bind:value={interest}>
-                            <option value="bionic-hand">Mano Biónica (Prótesis mecánica)</option>
-                            <option value="radio">Radio Vintage (Accesibilidad cognitiva)</option>
-                            <option value="pillbox">Pastillero Inteligente (Gestión medicación)</option>
-                            <option value="eye-tracker">Asistente Ocular (Comunicación)</option>
-                            <option value="other">Otro / Asesoría Técnica</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Detalles del Caso</label>
-                    <textarea id="message" rows="5" placeholder="Cuéntanos brevemente la situación, necesidades específicas o dudas que tengas..."></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-block btn-xl glow-effect">Enviar Solicitud</button>
-            </form>
         </div>
     </div>
 </div>

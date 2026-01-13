@@ -10,11 +10,12 @@
                 <img src="/assets/logo.png" alt="HumanHack.org Logo" class="logo-img" />
             </a>
             <nav class="nav">
-                <a href="/projects">Proyectos</a>
-                <a href="/help">Ayuda</a>
-                <a href="/about">Nosotros</a>
-                <a href="/join" class="btn btn-outline-nav">Unirse</a>
-                <a href="/donate" class="btn btn-primary btn-sm">Donar</a>
+                <a href="/projects">Descargar Proyectos</a>
+<a href="/help">Solicitar Ayuda</a>
+<a href="/about">Nosotros</a>
+<a href="/join">Unirse</a>
+<a href="/login">Login</a>
+<a href="/donate" class="btn btn-primary btn-sm">Donar</a>
             </nav>
         </div>
     </header>
@@ -27,7 +28,7 @@
         <div class="container footer-content">
             <div class="col">
                 <div class="logo-text-footer">humanhack.org</div>
-                <p>Democratizando la tecnología de asistencia a través del hardware libre y el conocimiento compartido.</p>
+                <p>El repositorio de hardware social. Democratizando la tecnología de asistencia a través del conocimiento compartido y validadado.</p>
             </div>
             <div class="col">
                 <h4>Plataforma</h4>
@@ -86,8 +87,18 @@
     }
     .nav {
         display: flex;
-        gap: var(--spacing-md);
+        gap: 1rem;
         align-items: center;
+    }
+    .user-icon {
+        display: flex;
+        align-items: center;
+        color: var(--color-text);
+        transition: color 0.2s;
+        padding: 0.25rem;
+    }
+    .user-icon:hover {
+        color: var(--color-primary);
     }
     .nav a {
         font-weight: 500;
