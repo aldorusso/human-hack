@@ -156,7 +156,7 @@
     .search-input:focus {
         outline: none;
         border-color: var(--color-primary);
-        box-shadow: 0 0 0 3px rgba(28, 77, 141, 0.1);
+        box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
     }
 
     .filter-row {
@@ -307,7 +307,7 @@
         font-size: 0.8rem;
         font-weight: 600;
     }
-    .tag.difficulty { background: var(--color-accent); color: var(--color-primary); }
+    .tag.difficulty { background: #eff6ff; color: var(--color-primary); }
     .tag.spec { background: #f1f5f9; color: var(--color-text-muted); }
 
     .author-credits {
