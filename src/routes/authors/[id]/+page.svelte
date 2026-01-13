@@ -103,7 +103,7 @@
 
     .header-band {
         height: 200px;
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
     }
 
     .main-content {

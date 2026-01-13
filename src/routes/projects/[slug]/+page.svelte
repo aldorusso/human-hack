@@ -246,7 +246,7 @@
         align-items: center;
         border: 1px solid #e2e8f0;
     }
-    .bom-item .qty { font-weight: 700; color: var(--color-primary); background: rgba(13, 148, 136, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.9rem; }
+    .bom-item .qty { font-weight: 700; color: var(--color-primary); background: var(--color-accent); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.9rem; }
     .bom-item .name { font-weight: 500; color: var(--color-text); }
 
     /* DOWNLOAD CARD */
