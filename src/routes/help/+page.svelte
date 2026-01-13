@@ -1,15 +1,28 @@
 <script lang="ts">
-   import { fade, fly } from 'svelte/transition';
-   import PageHeader from '$lib/components/PageHeader.svelte';
+    import { fade, fly } from 'svelte/transition';
+    import PageHeader from '$lib/components/PageHeader.svelte';
 
-   let role = 'familiar';
-   let interest = 'bionic-hand';
-   
-   const roles = [
-       { id: 'familiar', label: 'Familiar / Usuario', icon: '👨‍👩‍👧' },
-       { id: 'professional', label: 'Profesional Salud', icon: '🩺' },
-       { id: 'ong', label: 'ONG / Asociación', icon: '🤝' }
-   ];
+    let role = 'familiar';
+    let interest = 'bionic-hand';
+    let step = 1;
+    let name = '';
+    let email = '';
+    let message = '';
+
+    const roles = [
+        { id: 'familiar', label: 'Familiar / Usuario', icon: '👨‍👩‍👧' },
+        { id: 'professional', label: 'Profesional Salud', icon: '🩺' },
+        { id: 'ong', label: 'ONG / Asociación', icon: '🤝' }
+    ];
+
+    function submit() {
+        console.log({ role, interest, name, email, message });
+        // Reset form after submission (placeholder behavior)
+        step = 1;
+        name = '';
+        email = '';
+        message = '';
+    }
 </script>
 
 <svelte:head>
@@ -109,26 +122,12 @@
     </div>
 </div>
 </div>
+</div>
+</div>
                 
 
 
-                <div class="form-section">
-                    <label class="section-label">¿Quién eres?</label>
-                    <div class="role-grid">
-                        {#each roles as r}
-                            <button 
-                                type="button" 
-                                class="role-card {role === r.id ? 'active' : ''}" 
-                                on:click={() => role = r.id}
-                            >
-                                <div class="role-icon">{r.icon}</div>
-                                <span>{r.label}</span>
-                            </button>
-                        {/each}
 
-        </div>
-    </div>
-</div>
 
 <style>
     .page-wrapper {
